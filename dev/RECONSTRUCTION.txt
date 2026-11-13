@@ -1,0 +1,63 @@
+Source provenance
+=================
+Input: the PROCEXP152.sys opened in IDA at 127.0.0.1:13337.
+SHA256: 9b6a84f7c40ea51c38cc4d2e93efb3375e9d98d4894a85941190d94fbe73a4e4
+Image base: 0x180000000.
+122 IDA functions were decompiled; 17 functions in RVA 0x15D0..0x3370
+constitute the driver core. Other functions are import thunks, WDK routines,
+or compiler/runtime support. Their pseudocode is archived, not discarded.
+
+Reconstruction decisions
+========================
+1. Core routines retain original address comments and an address/name map.
+   Symbol and local names are reconstructed, not recovered debug information.
+2. DriverEntry, dispatch, unload and object-type lookup use proper WDK structs.
+   The original split scalar UNICODE_STRING/OBJECT_ATTRIBUTES locals must not
+   be compiled literally: they depend on the original stack layout.
+3. PsProcessType, PsThreadType and IoFileObjectType use the dereferencing
+   required by their WDK declarations. The original disassembly confirms it.
+4. The 0x130-byte SystemModuleInformation stack buffer was incorrectly split
+   into a 24-byte array plus adjacent scalars by Hex-Rays. It is represented
+   as one buffer, with ImageBase at +0x18 and ImageSize at +0x20.
+5. IoStatus uses its real STATUS/Information layout and the dispatch routine
+   uses DeviceIoControl union fields instead of decompiler Read/Create aliases.
+6. Original native PE scope tables, which Hex-Rays omitted, were inspected:
+   - 0x1A20: finally detaches the APC state and releases the process reference.
+   - 0x2320: a guarded file-name query returns STATUS_ACCESS_VIOLATION.
+   - 0x2680: the guarded name rendering catches access violations and attempts
+     a protected object-reference release. The empty finally funclet at 0x3590
+     has no cleanup operations and is not reproduced as a separate function.
+7. The original WDK IoCreateDeviceSecure and SDDL support are replaced by the
+   installed WDK's wdmsec.lib. Compiler cookie initialization is supplied by
+   the WDK GsDriverEntry wrapper, rather than copying old CRT machine code.
+8. The original local Handle in DeviceControl remains uninitialized. Compiler
+   definite-assignment diagnostics are lowered to warnings rather than changing
+   its value. An earlier reconstruction initialized it to NULL; that change has
+   been withdrawn to retain the original behavior.
+9. ReadThreadMemory uses an inline CR8 read, matching the original instructions,
+   rather than the newer WDK's imported KeGetCurrentIrql helper.
+
+Original behavior deliberately retained
+======================================
+- Device name and symbolic link PROCEXP152; device type 0x8335.
+- The original SDDL grants generic-all to SYSTEM and built-in administrators.
+- Open requests check SeDebugPrivilege.
+- All 16 DeviceControl switch cases and their input/output length checks.
+- The shared dispatch also registers CLOSE but returns invalid-device-request
+  for it, matching the observed original branch.
+- Legacy object offsets, unusual return/cleanup paths, and the old object-type
+  function pointer's -1 initial value remain. This is not a modernization pass.
+- Unsafe original assumptions were not silently converted into new APIs.
+
+Limits of the result
+====================
+Successful compilation and PE/static checks do not prove behavioral equivalence.
+The installed WDK and MSVC differ from the original toolchain; code layout,
+metadata, runtime wrappers and library internals differ. The original signature
+and version resources are not reconstructed. The rebuilt SYS is unsigned.
+No real kernel loading, live IOCTL exercise, or OS compatibility test was run.
+Instruction-level differential emulation is recorded separately in
+differential_report.json. Kernel API behavior is mocked and native Windows
+exception dispatch/unwinding is not exercised by that harness. Both failures
+and original odd paths are compared without adding cleanup or range checks.
+Refer to ida_export.json and all_pseudocode.c as the original analysis snapshot.

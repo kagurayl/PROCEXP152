@@ -1,0 +1,7 @@
+#pragma once
+extern ULONG gBuildNumber;
+extern POBJECT_TYPE gMutantObjectType;
+extern PROCEXP_ACQUIRE_EXIT_SYNC gAcquireProcessExitSynchronization;
+extern PROCEXP_RELEASE_EXIT_SYNC gReleaseProcessExitSynchronization;
+extern PROCEXP_GET_POOL_SIZE gGetMaximumNonPagedPoolInBytes;
+extern PROCEXP_GET_OBJECT_TYPE gGetObjectType;

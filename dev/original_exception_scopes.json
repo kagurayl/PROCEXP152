@@ -1,0 +1,53 @@
+[
+  {
+    "function_rva": "0x1a20",
+    "flags": 2,
+    "handler_rva": "0x34c7",
+    "scopes": [
+      {
+        "begin": "0x1a42",
+        "end": "0x1aa4",
+        "handler": "0x3560",
+        "target": "0x0"
+      }
+    ]
+  },
+  {
+    "function_rva": "0x2320",
+    "flags": 1,
+    "handler_rva": "0x34c7",
+    "scopes": [
+      {
+        "begin": "0x237d",
+        "end": "0x24d0",
+        "handler": "0x1",
+        "target": "0x24d4"
+      }
+    ]
+  },
+  {
+    "function_rva": "0x2680",
+    "flags": 3,
+    "handler_rva": "0x34c7",
+    "scopes": [
+      {
+        "begin": "0x2866",
+        "end": "0x28c8",
+        "handler": "0x3590",
+        "target": "0x0"
+      },
+      {
+        "begin": "0x292f",
+        "end": "0x2aff",
+        "handler": "0x1",
+        "target": "0x2aff"
+      },
+      {
+        "begin": "0x2b11",
+        "end": "0x2b21",
+        "handler": "0x1",
+        "target": "0x2b21"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1874 @@
+{
+  "method": "Unicorn x64 original/rebuilt instruction differential execution with mock kernel APIs",
+  "original_sha256": "9b6a84f7c40ea51c38cc4d2e93efb3375e9d98d4894a85941190d94fbe73a4e4",
+  "rebuilt_sha256": "0e11171b97df32e17cbe088bd45276b49613ee9132884d77010f130937d4aded",
+  "summary": {
+    "pass": 182,
+    "mismatch": 0,
+    "unresolved": 0
+  },
+  "limitations": [
+    "Mock kernel APIs, not Windows kernel execution",
+    "Native exception dispatch/unwinding is not emulated",
+    "No concurrency, kernel lifetime, PatchGuard, or OS-version compatibility validation",
+    "Passing cases do not prove equivalence on every input or undefined behavior"
+  ],
+  "results": [
+    {
+      "test": {
+        "label": "length_00_0_0",
+        "ioctl": 2201288704,
+        "input_length": 0,
+        "output_length": 0,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_00_1_1",
+        "ioctl": 2201288704,
+        "input_length": 1,
+        "output_length": 1,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_00_4_4",
+        "ioctl": 2201288704,
+        "input_length": 4,
+        "output_length": 4,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_00_8_8",
+        "ioctl": 2201288704,
+        "input_length": 8,
+        "output_length": 8,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_00_16_24",
+        "ioctl": 2201288704,
+        "input_length": 16,
+        "output_length": 24,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_00_64_128",
+        "ioctl": 2201288704,
+        "input_length": 64,
+        "output_length": 128,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_00",
+        "ioctl": 2201288704,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_00_no_sync",
+        "ioctl": 2201288704,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "sync": false
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_00_system_pid",
+        "ioctl": 2201288704,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "pid": 4
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_00_ref_failure",
+        "ioctl": 2201288704,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "fail": "ObReferenceObjectByHandle"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_00_sync_failure",
+        "ioctl": 2201288704,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "fail": "AcquireExitSync"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_00_lookup_failure",
+        "ioctl": 2201288704,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "fail": "PsLookupProcessByProcessId"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_00_wrong_object",
+        "ioctl": 2201288704,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "wrong_object": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_00_file_name",
+        "ioctl": 2201288704,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "file_object": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_00_file_bad_size",
+        "ioctl": 2201288704,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "file_object": true,
+        "bad_object_size": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_00_file_query_failure",
+        "ioctl": 2201288704,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "file_object": true,
+        "fail": "ObQueryNameString"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_00_ansi_failure",
+        "ioctl": 2201288704,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "fail": "RtlUnicodeStringToAnsiString"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_00_query_failure",
+        "ioctl": 2201288704,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "fail": "ObQueryNameString"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_04_0_0",
+        "ioctl": 2201288708,
+        "input_length": 0,
+        "output_length": 0,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_04_1_1",
+        "ioctl": 2201288708,
+        "input_length": 1,
+        "output_length": 1,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_04_4_4",
+        "ioctl": 2201288708,
+        "input_length": 4,
+        "output_length": 4,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_04_8_8",
+        "ioctl": 2201288708,
+        "input_length": 8,
+        "output_length": 8,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_04_16_24",
+        "ioctl": 2201288708,
+        "input_length": 16,
+        "output_length": 24,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_04_32_64",
+        "ioctl": 2201288708,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_04_64_128",
+        "ioctl": 2201288708,
+        "input_length": 64,
+        "output_length": 128,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_04",
+        "ioctl": 2201288708,
+        "input_length": 32,
+        "output_length": 0,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_04_ref_failure",
+        "ioctl": 2201288708,
+        "input_length": 32,
+        "output_length": 0,
+        "request": true,
+        "fail": "ObReferenceObjectByHandle"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_08_0_0",
+        "ioctl": 2201288712,
+        "input_length": 0,
+        "output_length": 0,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_08_1_1",
+        "ioctl": 2201288712,
+        "input_length": 1,
+        "output_length": 1,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_08_8_8",
+        "ioctl": 2201288712,
+        "input_length": 8,
+        "output_length": 8,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_08_16_24",
+        "ioctl": 2201288712,
+        "input_length": 16,
+        "output_length": 24,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_08_32_64",
+        "ioctl": 2201288712,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_08_64_128",
+        "ioctl": 2201288712,
+        "input_length": 64,
+        "output_length": 128,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_08",
+        "ioctl": 2201288712,
+        "input_length": 4,
+        "output_length": 4
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_0c_0_0",
+        "ioctl": 2201288716,
+        "input_length": 0,
+        "output_length": 0,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_0c_1_1",
+        "ioctl": 2201288716,
+        "input_length": 1,
+        "output_length": 1,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_0c_4_4",
+        "ioctl": 2201288716,
+        "input_length": 4,
+        "output_length": 4,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_0c_16_24",
+        "ioctl": 2201288716,
+        "input_length": 16,
+        "output_length": 24,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_0c_32_64",
+        "ioctl": 2201288716,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_0c_64_128",
+        "ioctl": 2201288716,
+        "input_length": 64,
+        "output_length": 128,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_0c",
+        "ioctl": 2201288716,
+        "input_length": 8,
+        "output_length": 8
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_0c_ref_failure",
+        "ioctl": 2201288716,
+        "input_length": 8,
+        "output_length": 8,
+        "fail": "ObReferenceObjectByHandle"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_14_0_0",
+        "ioctl": 2201288724,
+        "input_length": 0,
+        "output_length": 0,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_14_1_1",
+        "ioctl": 2201288724,
+        "input_length": 1,
+        "output_length": 1,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_14_4_4",
+        "ioctl": 2201288724,
+        "input_length": 4,
+        "output_length": 4,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_14_8_8",
+        "ioctl": 2201288724,
+        "input_length": 8,
+        "output_length": 8,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_14_16_24",
+        "ioctl": 2201288724,
+        "input_length": 16,
+        "output_length": 24,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_14_32_64",
+        "ioctl": 2201288724,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_14_64_128",
+        "ioctl": 2201288724,
+        "input_length": 64,
+        "output_length": 128,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_14",
+        "ioctl": 2201288724,
+        "input_length": 32,
+        "output_length": 8,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_14_ref_failure",
+        "ioctl": 2201288724,
+        "input_length": 32,
+        "output_length": 8,
+        "request": true,
+        "fail": "ObReferenceObjectByHandle"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_20_0_0",
+        "ioctl": 2201288736,
+        "input_length": 0,
+        "output_length": 0,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_20_1_1",
+        "ioctl": 2201288736,
+        "input_length": 1,
+        "output_length": 1,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_20_4_4",
+        "ioctl": 2201288736,
+        "input_length": 4,
+        "output_length": 4,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_20_16_24",
+        "ioctl": 2201288736,
+        "input_length": 16,
+        "output_length": 24,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_20_32_64",
+        "ioctl": 2201288736,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_20_64_128",
+        "ioctl": 2201288736,
+        "input_length": 64,
+        "output_length": 128,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_20",
+        "ioctl": 2201288736,
+        "input_length": 8,
+        "output_length": 8,
+        "input_value": 1610678272
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_24_0_0",
+        "ioctl": 2201288740,
+        "input_length": 0,
+        "output_length": 0,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_24_1_1",
+        "ioctl": 2201288740,
+        "input_length": 1,
+        "output_length": 1,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_24_4_4",
+        "ioctl": 2201288740,
+        "input_length": 4,
+        "output_length": 4,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_24_8_8",
+        "ioctl": 2201288740,
+        "input_length": 8,
+        "output_length": 8,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_24_16_24",
+        "ioctl": 2201288740,
+        "input_length": 16,
+        "output_length": 24,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_24_32_64",
+        "ioctl": 2201288740,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_24_64_128",
+        "ioctl": 2201288740,
+        "input_length": 64,
+        "output_length": 128,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_24",
+        "ioctl": 2201288740,
+        "input_length": 16,
+        "output_length": 16,
+        "memory": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_28_0_0",
+        "ioctl": 2201288744,
+        "input_length": 0,
+        "output_length": 0,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_28_1_1",
+        "ioctl": 2201288744,
+        "input_length": 1,
+        "output_length": 1,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_28_4_4",
+        "ioctl": 2201288744,
+        "input_length": 4,
+        "output_length": 4,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_28_8_8",
+        "ioctl": 2201288744,
+        "input_length": 8,
+        "output_length": 8,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_28_16_24",
+        "ioctl": 2201288744,
+        "input_length": 16,
+        "output_length": 24,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_28_32_64",
+        "ioctl": 2201288744,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_28_64_128",
+        "ioctl": 2201288744,
+        "input_length": 64,
+        "output_length": 128,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_28",
+        "ioctl": 2201288744,
+        "input_length": 8,
+        "output_length": 24
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_28_ref_failure",
+        "ioctl": 2201288744,
+        "input_length": 8,
+        "output_length": 24,
+        "fail": "ObReferenceObjectByHandle"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_28_terminated",
+        "ioctl": 2201288744,
+        "input_length": 8,
+        "output_length": 24,
+        "terminated": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_2c_0_0",
+        "ioctl": 2201288748,
+        "input_length": 0,
+        "output_length": 0,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_2c_1_1",
+        "ioctl": 2201288748,
+        "input_length": 1,
+        "output_length": 1,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_2c_4_4",
+        "ioctl": 2201288748,
+        "input_length": 4,
+        "output_length": 4,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_2c_16_24",
+        "ioctl": 2201288748,
+        "input_length": 16,
+        "output_length": 24,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_2c_32_64",
+        "ioctl": 2201288748,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_2c_64_128",
+        "ioctl": 2201288748,
+        "input_length": 64,
+        "output_length": 128,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_2c",
+        "ioctl": 2201288748,
+        "input_length": 8,
+        "output_length": 8
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_2c_ref_failure",
+        "ioctl": 2201288748,
+        "input_length": 8,
+        "output_length": 8,
+        "fail": "ObReferenceObjectByHandle"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_34_0_0",
+        "ioctl": 2201288756,
+        "input_length": 0,
+        "output_length": 0,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_34_1_1",
+        "ioctl": 2201288756,
+        "input_length": 1,
+        "output_length": 1,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_34_4_4",
+        "ioctl": 2201288756,
+        "input_length": 4,
+        "output_length": 4,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_34_8_8",
+        "ioctl": 2201288756,
+        "input_length": 8,
+        "output_length": 8,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_34_16_24",
+        "ioctl": 2201288756,
+        "input_length": 16,
+        "output_length": 24,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_34_32_64",
+        "ioctl": 2201288756,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_34_64_128",
+        "ioctl": 2201288756,
+        "input_length": 64,
+        "output_length": 128,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_34",
+        "ioctl": 2201288756,
+        "input_length": 8,
+        "output_length": 4
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_34_ref_failure",
+        "ioctl": 2201288756,
+        "input_length": 8,
+        "output_length": 4,
+        "fail": "ObReferenceObjectByHandle"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_3c_0_0",
+        "ioctl": 2201288764,
+        "input_length": 0,
+        "output_length": 0,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_3c_1_1",
+        "ioctl": 2201288764,
+        "input_length": 1,
+        "output_length": 1,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_3c_4_4",
+        "ioctl": 2201288764,
+        "input_length": 4,
+        "output_length": 4,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_3c_16_24",
+        "ioctl": 2201288764,
+        "input_length": 16,
+        "output_length": 24,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_3c_32_64",
+        "ioctl": 2201288764,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_3c_64_128",
+        "ioctl": 2201288764,
+        "input_length": 64,
+        "output_length": 128,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_3c",
+        "ioctl": 2201288764,
+        "input_length": 8,
+        "output_length": 8
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_3c_ref_failure",
+        "ioctl": 2201288764,
+        "input_length": 8,
+        "output_length": 8,
+        "fail": "ObReferenceObjectByHandle"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_40_0_0",
+        "ioctl": 2201288768,
+        "input_length": 0,
+        "output_length": 0,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_40_1_1",
+        "ioctl": 2201288768,
+        "input_length": 1,
+        "output_length": 1,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_40_4_4",
+        "ioctl": 2201288768,
+        "input_length": 4,
+        "output_length": 4,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_40_8_8",
+        "ioctl": 2201288768,
+        "input_length": 8,
+        "output_length": 8,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_40_16_24",
+        "ioctl": 2201288768,
+        "input_length": 16,
+        "output_length": 24,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_40_64_128",
+        "ioctl": 2201288768,
+        "input_length": 64,
+        "output_length": 128,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_40",
+        "ioctl": 2201288768,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_40_no_sync",
+        "ioctl": 2201288768,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "sync": false
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_40_system_pid",
+        "ioctl": 2201288768,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "pid": 4
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_40_ref_failure",
+        "ioctl": 2201288768,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "fail": "ObReferenceObjectByHandle"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_40_sync_failure",
+        "ioctl": 2201288768,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "fail": "AcquireExitSync"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_40_lookup_failure",
+        "ioctl": 2201288768,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "fail": "PsLookupProcessByProcessId"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_40_wrong_object",
+        "ioctl": 2201288768,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "wrong_object": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_44_0_0",
+        "ioctl": 2201288772,
+        "input_length": 0,
+        "output_length": 0,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_44_1_1",
+        "ioctl": 2201288772,
+        "input_length": 1,
+        "output_length": 1,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_44_4_4",
+        "ioctl": 2201288772,
+        "input_length": 4,
+        "output_length": 4,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_44_8_8",
+        "ioctl": 2201288772,
+        "input_length": 8,
+        "output_length": 8,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_44_16_24",
+        "ioctl": 2201288772,
+        "input_length": 16,
+        "output_length": 24,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_44_32_64",
+        "ioctl": 2201288772,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_44_64_128",
+        "ioctl": 2201288772,
+        "input_length": 64,
+        "output_length": 128,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_44",
+        "ioctl": 2201288772,
+        "input_length": 8,
+        "output_length": 4,
+        "input_value": 1610940416
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_48_0_0",
+        "ioctl": 2201288776,
+        "input_length": 0,
+        "output_length": 0,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_48_1_1",
+        "ioctl": 2201288776,
+        "input_length": 1,
+        "output_length": 1,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_48_4_4",
+        "ioctl": 2201288776,
+        "input_length": 4,
+        "output_length": 4,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_48_8_8",
+        "ioctl": 2201288776,
+        "input_length": 8,
+        "output_length": 8,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_48_16_24",
+        "ioctl": 2201288776,
+        "input_length": 16,
+        "output_length": 24,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_48_64_128",
+        "ioctl": 2201288776,
+        "input_length": 64,
+        "output_length": 128,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_48",
+        "ioctl": 2201288776,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_48_no_sync",
+        "ioctl": 2201288776,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "sync": false
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_48_system_pid",
+        "ioctl": 2201288776,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "pid": 4
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_48_ref_failure",
+        "ioctl": 2201288776,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "fail": "ObReferenceObjectByHandle"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_48_sync_failure",
+        "ioctl": 2201288776,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "fail": "AcquireExitSync"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_48_lookup_failure",
+        "ioctl": 2201288776,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "fail": "PsLookupProcessByProcessId"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_48_wrong_object",
+        "ioctl": 2201288776,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "wrong_object": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_48_file_name",
+        "ioctl": 2201288776,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "file_object": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_48_file_bad_size",
+        "ioctl": 2201288776,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "file_object": true,
+        "bad_object_size": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_48_file_query_failure",
+        "ioctl": 2201288776,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "file_object": true,
+        "fail": "ObQueryNameString"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_48_ansi_failure",
+        "ioctl": 2201288776,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "fail": "RtlUnicodeStringToAnsiString"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_48_query_failure",
+        "ioctl": 2201288776,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "fail": "ObQueryNameString"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_4c_0_0",
+        "ioctl": 2201288780,
+        "input_length": 0,
+        "output_length": 0,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_4c_1_1",
+        "ioctl": 2201288780,
+        "input_length": 1,
+        "output_length": 1,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_4c_4_4",
+        "ioctl": 2201288780,
+        "input_length": 4,
+        "output_length": 4,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_4c_8_8",
+        "ioctl": 2201288780,
+        "input_length": 8,
+        "output_length": 8,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_4c_16_24",
+        "ioctl": 2201288780,
+        "input_length": 16,
+        "output_length": 24,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_4c_64_128",
+        "ioctl": 2201288780,
+        "input_length": 64,
+        "output_length": 128,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_4c",
+        "ioctl": 2201288780,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_4c_no_sync",
+        "ioctl": 2201288780,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "sync": false
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_4c_system_pid",
+        "ioctl": 2201288780,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "pid": 4
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_4c_ref_failure",
+        "ioctl": 2201288780,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "fail": "ObReferenceObjectByHandle"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_4c_sync_failure",
+        "ioctl": 2201288780,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "fail": "AcquireExitSync"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_4c_lookup_failure",
+        "ioctl": 2201288780,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "fail": "PsLookupProcessByProcessId"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_4c_wrong_object",
+        "ioctl": 2201288780,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true,
+        "wrong_object": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_50_0_0",
+        "ioctl": 2201288784,
+        "input_length": 0,
+        "output_length": 0,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_50_1_1",
+        "ioctl": 2201288784,
+        "input_length": 1,
+        "output_length": 1,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_50_4_4",
+        "ioctl": 2201288784,
+        "input_length": 4,
+        "output_length": 4,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_50_8_8",
+        "ioctl": 2201288784,
+        "input_length": 8,
+        "output_length": 8,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_50_16_24",
+        "ioctl": 2201288784,
+        "input_length": 16,
+        "output_length": 24,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_50_32_64",
+        "ioctl": 2201288784,
+        "input_length": 32,
+        "output_length": 64,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "length_50_64_128",
+        "ioctl": 2201288784,
+        "input_length": 64,
+        "output_length": 128,
+        "request": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "valid_50",
+        "ioctl": 2201288784,
+        "input_length": 0,
+        "output_length": 8
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "version_0",
+        "ioctl": 2201288712,
+        "input_length": 4,
+        "output_length": 4,
+        "input_value": 0
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "version_151",
+        "ioctl": 2201288712,
+        "input_length": 4,
+        "output_length": 4,
+        "input_value": 151
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "version_152",
+        "ioctl": 2201288712,
+        "input_length": 4,
+        "output_length": 4,
+        "input_value": 152
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "version_153",
+        "ioctl": 2201288712,
+        "input_length": 4,
+        "output_length": 4,
+        "input_value": 153
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "version_4294967295",
+        "ioctl": 2201288712,
+        "input_length": 4,
+        "output_length": 4,
+        "input_value": 4294967295
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "unknown_0",
+        "ioctl": 0,
+        "input_length": 0,
+        "output_length": 0
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "unknown_83350010",
+        "ioctl": 2201288720,
+        "input_length": 0,
+        "output_length": 0
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "unknown_83350018",
+        "ioctl": 2201288728,
+        "input_length": 0,
+        "output_length": 0
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "unknown_83350054",
+        "ioctl": 2201288788,
+        "input_length": 0,
+        "output_length": 0
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "unknown_ffffffff",
+        "ioctl": 4294967295,
+        "input_length": 0,
+        "output_length": 0
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "pool_missing",
+        "ioctl": 2201288784,
+        "input_length": 0,
+        "output_length": 8,
+        "pool": false
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "pending_open_process",
+        "ioctl": 2201288764,
+        "input_length": 8,
+        "output_length": 8,
+        "api_status": {
+          "ZwOpenProcess": 259
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "token_failure_ObOpenObjectByPointer",
+        "ioctl": 2201288716,
+        "input_length": 8,
+        "output_length": 8,
+        "fail": "ObOpenObjectByPointer"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "token_failure_ZwOpenProcessToken",
+        "ioctl": 2201288716,
+        "input_length": 8,
+        "output_length": 8,
+        "fail": "ZwOpenProcessToken"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "ignored_owner_open_failure",
+        "ioctl": 2201288748,
+        "input_length": 8,
+        "output_length": 8,
+        "fail": "ObOpenObjectByPointer"
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "dispatch_create",
+        "kind": "dispatch",
+        "major": 0,
+        "ioctl": 2201288712,
+        "input_length": 4,
+        "output_length": 4
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "dispatch_create_denied",
+        "kind": "dispatch",
+        "major": 0,
+        "ioctl": 2201288712,
+        "input_length": 4,
+        "output_length": 4,
+        "deny_privilege": true
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "dispatch_close",
+        "kind": "dispatch",
+        "major": 2,
+        "ioctl": 2201288712,
+        "input_length": 4,
+        "output_length": 4
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "dispatch_unknown_major",
+        "kind": "dispatch",
+        "major": 3,
+        "ioctl": 2201288712,
+        "input_length": 4,
+        "output_length": 4
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "dispatch_device_control",
+        "kind": "dispatch",
+        "major": 14,
+        "ioctl": 2201288712,
+        "input_length": 4,
+        "output_length": 4
+      },
+      "status": "pass"
+    },
+    {
+      "test": {
+        "label": "unload",
+        "kind": "unload",
+        "ioctl": 0,
+        "input_length": 0,
+        "output_length": 0
+      },
+      "status": "pass"
+    }
+  ]
+}

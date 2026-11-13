@@ -1,0 +1,734 @@
+[
+  {
+    "rva": "0x1000",
+    "original": "WdmlibIoValidateDeviceIoControlAccess",
+    "recovered": "WdmlibIoValidateDeviceIoControlAccess",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x1018",
+    "original": "WdmlibRtlInitUnicodeStringEx",
+    "recovered": "WdmlibRtlInitUnicodeStringEx",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x1090",
+    "original": "memmove",
+    "recovered": "memmove",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x13e0",
+    "original": "memset",
+    "recovered": "memset",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x14e4",
+    "original": "__GSHandlerCheckCommon",
+    "recovered": "__GSHandlerCheckCommon",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x1548",
+    "original": "__GSHandlerCheck",
+    "recovered": "__GSHandlerCheck",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x1580",
+    "original": "__security_check_cookie",
+    "recovered": "__security_check_cookie",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x15a0",
+    "original": "__report_gsfailure",
+    "recovered": "__report_gsfailure",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x15d0",
+    "original": "DriverEntry",
+    "recovered": "DriverEntry",
+    "category": "core"
+  },
+  {
+    "rva": "0x1950",
+    "original": "sub_180001950",
+    "recovered": "ProcExpDuplicateHandle",
+    "category": "core"
+  },
+  {
+    "rva": "0x1a20",
+    "original": "sub_180001A20",
+    "recovered": "ProcExpCloseRemoteHandle",
+    "category": "core"
+  },
+  {
+    "rva": "0x1ae0",
+    "original": "sub_180001AE0",
+    "recovered": "ProcExpDeviceControl",
+    "category": "core"
+  },
+  {
+    "rva": "0x2220",
+    "original": "sub_180002220",
+    "recovered": "ProcExpDispatch",
+    "category": "core"
+  },
+  {
+    "rva": "0x2320",
+    "original": "sub_180002320",
+    "recovered": "ProcExpQueryFileName",
+    "category": "core"
+  },
+  {
+    "rva": "0x2500",
+    "original": "sub_180002500",
+    "recovered": "ProcExpQueryThreadContext",
+    "category": "core"
+  },
+  {
+    "rva": "0x25e0",
+    "original": "sub_1800025E0",
+    "recovered": "ProcExpQueryMutantOwner",
+    "category": "core"
+  },
+  {
+    "rva": "0x2680",
+    "original": "sub_180002680",
+    "recovered": "ProcExpQueryObjectName",
+    "category": "core"
+  },
+  {
+    "rva": "0x2b40",
+    "original": "sub_180002B40",
+    "recovered": "ProcExpQueryObjectType",
+    "category": "core"
+  },
+  {
+    "rva": "0x2e40",
+    "original": "sub_180002E40",
+    "recovered": "ProcExpLookupObjectType",
+    "category": "core"
+  },
+  {
+    "rva": "0x2fd0",
+    "original": "sub_180002FD0",
+    "recovered": "ProcExpDuplicateRequestHandle",
+    "category": "core"
+  },
+  {
+    "rva": "0x2ff0",
+    "original": "sub_180002FF0",
+    "recovered": "ProcExpQueryExecuteFlags",
+    "category": "core"
+  },
+  {
+    "rva": "0x30a0",
+    "original": "sub_1800030A0",
+    "recovered": "ProcExpReadThreadMemory",
+    "category": "core"
+  },
+  {
+    "rva": "0x3280",
+    "original": "sub_180003280",
+    "recovered": "ProcExpUnload",
+    "category": "core"
+  },
+  {
+    "rva": "0x32f0",
+    "original": "sub_1800032F0",
+    "recovered": "ProcExpReopenHandle",
+    "category": "core"
+  },
+  {
+    "rva": "0x3370",
+    "original": "sub_180003370",
+    "recovered": "ProcExpQueryModules",
+    "category": "core"
+  },
+  {
+    "rva": "0x33fb",
+    "original": "strncpy",
+    "recovered": "strncpy",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3401",
+    "original": "RtlInitUnicodeString",
+    "recovered": "RtlInitUnicodeString",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3407",
+    "original": "RtlUnicodeStringToAnsiString",
+    "recovered": "RtlUnicodeStringToAnsiString",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x340d",
+    "original": "RtlFreeAnsiString",
+    "recovered": "RtlFreeAnsiString",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3413",
+    "original": "KeWaitForSingleObject",
+    "recovered": "KeWaitForSingleObject",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3419",
+    "original": "ExAllocatePoolWithTag",
+    "recovered": "ExAllocatePoolWithTag",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x341f",
+    "original": "ExFreePoolWithTag",
+    "recovered": "ExFreePoolWithTag",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3425",
+    "original": "ExGetPreviousMode",
+    "recovered": "ExGetPreviousMode",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x342b",
+    "original": "MmGetSystemRoutineAddress",
+    "recovered": "MmGetSystemRoutineAddress",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3431",
+    "original": "SeCaptureSubjectContext",
+    "recovered": "SeCaptureSubjectContext",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3437",
+    "original": "SeReleaseSubjectContext",
+    "recovered": "SeReleaseSubjectContext",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x343d",
+    "original": "IofCompleteRequest",
+    "recovered": "IofCompleteRequest",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3443",
+    "original": "IoCreateSymbolicLink",
+    "recovered": "IoCreateSymbolicLink",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3449",
+    "original": "IoDeleteDevice",
+    "recovered": "IoDeleteDevice",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x344f",
+    "original": "IoDeleteSymbolicLink",
+    "recovered": "IoDeleteSymbolicLink",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3455",
+    "original": "ObReferenceObjectByHandle",
+    "recovered": "ObReferenceObjectByHandle",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x345b",
+    "original": "ObfDereferenceObject",
+    "recovered": "ObfDereferenceObject",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3461",
+    "original": "ZwClose",
+    "recovered": "ZwClose",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3467",
+    "original": "MmIsAddressValid",
+    "recovered": "MmIsAddressValid",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x346d",
+    "original": "PsGetVersion",
+    "recovered": "PsGetVersion",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3473",
+    "original": "ZwOpenProcess",
+    "recovered": "ZwOpenProcess",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3479",
+    "original": "KeStackAttachProcess",
+    "recovered": "KeStackAttachProcess",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x347f",
+    "original": "KeUnstackDetachProcess",
+    "recovered": "KeUnstackDetachProcess",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3485",
+    "original": "SePrivilegeCheck",
+    "recovered": "SePrivilegeCheck",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x348b",
+    "original": "PsLookupProcessByProcessId",
+    "recovered": "PsLookupProcessByProcessId",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3491",
+    "original": "ObOpenObjectByPointer",
+    "recovered": "ObOpenObjectByPointer",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3497",
+    "original": "ObQueryNameString",
+    "recovered": "ObQueryNameString",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x349d",
+    "original": "ZwQueryObject",
+    "recovered": "ZwQueryObject",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x34a3",
+    "original": "ZwDuplicateObject",
+    "recovered": "ZwDuplicateObject",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x34a9",
+    "original": "ZwOpenProcessToken",
+    "recovered": "ZwOpenProcessToken",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x34af",
+    "original": "ZwQueryInformationProcess",
+    "recovered": "ZwQueryInformationProcess",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x34b5",
+    "original": "ZwQuerySystemInformation",
+    "recovered": "ZwQuerySystemInformation",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x34bb",
+    "original": "ObCloseHandle",
+    "recovered": "ObCloseHandle",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x34c1",
+    "original": "ObOpenObjectByName",
+    "recovered": "ObOpenObjectByName",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x34c7",
+    "original": "__C_specific_handler",
+    "recovered": "__C_specific_handler",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x34cd",
+    "original": "IoCreateDevice",
+    "recovered": "IoCreateDevice",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x34d3",
+    "original": "ZwSetSecurityObject",
+    "recovered": "ZwSetSecurityObject",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x34d9",
+    "original": "_snwprintf",
+    "recovered": "_snwprintf",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x34df",
+    "original": "RtlLengthSecurityDescriptor",
+    "recovered": "RtlLengthSecurityDescriptor",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x34e5",
+    "original": "SeCaptureSecurityDescriptor",
+    "recovered": "SeCaptureSecurityDescriptor",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x34eb",
+    "original": "RtlCreateSecurityDescriptor",
+    "recovered": "RtlCreateSecurityDescriptor",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x34f1",
+    "original": "RtlSetDaclSecurityDescriptor",
+    "recovered": "RtlSetDaclSecurityDescriptor",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x34f7",
+    "original": "RtlAbsoluteToSelfRelativeSD",
+    "recovered": "RtlAbsoluteToSelfRelativeSD",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x34fd",
+    "original": "IoIsWdmVersionAvailable",
+    "recovered": "IoIsWdmVersionAvailable",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3503",
+    "original": "wcschr",
+    "recovered": "wcschr",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3509",
+    "original": "_wcsnicmp",
+    "recovered": "_wcsnicmp",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x350f",
+    "original": "RtlLengthSid",
+    "recovered": "RtlLengthSid",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3515",
+    "original": "RtlAddAccessAllowedAce",
+    "recovered": "RtlAddAccessAllowedAce",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x351b",
+    "original": "RtlGetSaclSecurityDescriptor",
+    "recovered": "RtlGetSaclSecurityDescriptor",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3521",
+    "original": "RtlGetDaclSecurityDescriptor",
+    "recovered": "RtlGetDaclSecurityDescriptor",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3527",
+    "original": "RtlGetGroupSecurityDescriptor",
+    "recovered": "RtlGetGroupSecurityDescriptor",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x352d",
+    "original": "RtlGetOwnerSecurityDescriptor",
+    "recovered": "RtlGetOwnerSecurityDescriptor",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3533",
+    "original": "ZwOpenKey",
+    "recovered": "ZwOpenKey",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3539",
+    "original": "ZwCreateKey",
+    "recovered": "ZwCreateKey",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x353f",
+    "original": "ZwQueryValueKey",
+    "recovered": "ZwQueryValueKey",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3545",
+    "original": "ZwSetValueKey",
+    "recovered": "ZwSetValueKey",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x354b",
+    "original": "RtlFreeUnicodeString_0",
+    "recovered": "RtlFreeUnicodeString_0",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x3551",
+    "original": "KeBugCheckEx",
+    "recovered": "KeBugCheckEx",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x7000",
+    "original": "WdmlibInit",
+    "recovered": "WdmlibInit",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x7068",
+    "original": "WdmlibIoCreateDeviceSecure",
+    "recovered": "WdmlibIoCreateDeviceSecure",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x70f8",
+    "original": "IopDevObjApplyPostCreationSettings",
+    "recovered": "IopDevObjApplyPostCreationSettings",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x71c8",
+    "original": "IoDevObjCreateDeviceSecure",
+    "recovered": "IoDevObjCreateDeviceSecure",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x7378",
+    "original": "PpRegStateLoadSecurityDescriptor",
+    "recovered": "PpRegStateLoadSecurityDescriptor",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x7384",
+    "original": "PpRegStateFreeStackCreationSettings",
+    "recovered": "PpRegStateFreeStackCreationSettings",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x73a0",
+    "original": "PiRegStateOpenClassKey",
+    "recovered": "PiRegStateOpenClassKey",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x7538",
+    "original": "PpRegStateInitEmptyCreationSettings",
+    "recovered": "PpRegStateInitEmptyCreationSettings",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x754c",
+    "original": "PiRegStateReadStackCreationSettingsFromKey",
+    "recovered": "PiRegStateReadStackCreationSettingsFromKey",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x7710",
+    "original": "PpRegStateReadCreateClassCreationSettings",
+    "recovered": "PpRegStateReadCreateClassCreationSettings",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x7838",
+    "original": "PpRegStateUpdateStackCreationSettings",
+    "recovered": "PpRegStateUpdateStackCreationSettings",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x795c",
+    "original": "SepSddlParseWideStringUlong",
+    "recovered": "SepSddlParseWideStringUlong",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x7a38",
+    "original": "SepSddlAddAceToAcl",
+    "recovered": "SepSddlAddAceToAcl",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x7b18",
+    "original": "SepSddlLookupAccessMaskInTable",
+    "recovered": "SepSddlLookupAccessMaskInTable",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x7bac",
+    "original": "SepSddlGetSidForString",
+    "recovered": "SepSddlGetSidForString",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x7c6c",
+    "original": "SepSddlGetAclForString",
+    "recovered": "SepSddlGetAclForString",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x8028",
+    "original": "SepSddlDaclFromSDDLString",
+    "recovered": "SepSddlDaclFromSDDLString",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x80e8",
+    "original": "SepSddlSecurityDescriptorFromSDDLString",
+    "recovered": "SepSddlSecurityDescriptorFromSDDLString",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x81e4",
+    "original": "SeSddlSecurityDescriptorFromSDDL",
+    "recovered": "SeSddlSecurityDescriptorFromSDDL",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x82a8",
+    "original": "SeSetSecurityAccessMask",
+    "recovered": "SeSetSecurityAccessMask",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x82d0",
+    "original": "SeUtilSecurityInfoFromSecurityDescriptor",
+    "recovered": "SeUtilSecurityInfoFromSecurityDescriptor",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x8398",
+    "original": "RtlFreeUnicodeString",
+    "recovered": "RtlFreeUnicodeString",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x83a0",
+    "original": "CmpRegUtilAllocateUnicodeString",
+    "recovered": "CmpRegUtilAllocateUnicodeString",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x83e8",
+    "original": "CmRegUtilUcValueSetUcString",
+    "recovered": "CmRegUtilUcValueSetUcString",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x84e4",
+    "original": "CmRegUtilUcValueSetFullBuffer",
+    "recovered": "CmRegUtilUcValueSetFullBuffer",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x8508",
+    "original": "CmRegUtilUcValueGetDword",
+    "recovered": "CmRegUtilUcValueGetDword",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x857c",
+    "original": "CmRegUtilCreateUcKey",
+    "recovered": "CmRegUtilCreateUcKey",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x8614",
+    "original": "CmRegUtilOpenExistingUcKey",
+    "recovered": "CmRegUtilOpenExistingUcKey",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x866c",
+    "original": "CmRegUtilWstrValueSetWstrString",
+    "recovered": "CmRegUtilWstrValueSetWstrString",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x86bc",
+    "original": "CmRegUtilUcValueSetWstrString",
+    "recovered": "CmRegUtilUcValueSetWstrString",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x86f8",
+    "original": "CmRegUtilWstrValueSetUcString",
+    "recovered": "CmRegUtilWstrValueSetUcString",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x8734",
+    "original": "CmRegUtilWstrValueSetFullBuffer",
+    "recovered": "CmRegUtilWstrValueSetFullBuffer",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x878c",
+    "original": "CmRegUtilWstrValueGetDword",
+    "recovered": "CmRegUtilWstrValueGetDword",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x87d8",
+    "original": "CmRegUtilCreateWstrKey",
+    "recovered": "CmRegUtilCreateWstrKey",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x8848",
+    "original": "CmRegUtilOpenExistingWstrKey",
+    "recovered": "CmRegUtilOpenExistingWstrKey",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x8894",
+    "original": "CmRegUtilUcValueGetFullBuffer",
+    "recovered": "CmRegUtilUcValueGetFullBuffer",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x89c8",
+    "original": "CmRegUtilWstrValueGetFullBuffer",
+    "recovered": "CmRegUtilWstrValueGetFullBuffer",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x9000",
+    "original": "__security_init_cookie",
+    "recovered": "__security_init_cookie",
+    "category": "wdk_or_runtime"
+  },
+  {
+    "rva": "0x9058",
+    "original": "start",
+    "recovered": "start",
+    "category": "wdk_or_runtime"
+  }
+]
